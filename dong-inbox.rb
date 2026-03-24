@@ -4,6 +4,7 @@
 class DongInbox < Formula
   desc "inBox 笔记命令行工具"
   homepage "https://github.com/dong-labs/inbox-cli"
+  version "1.0.1"
 
   on_macos do
     if Hardware::CPU.arm?
@@ -14,8 +15,6 @@ class DongInbox < Formula
       sha256 :no_check
     end
   end
-
-  version "1.0.1"
 
   def install
     bin.install "dong-inbox" => "inbox"
