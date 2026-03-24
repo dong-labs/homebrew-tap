@@ -3,13 +3,15 @@
 
 class DongInbox < Formula
   desc "inBox 笔记命令行工具"
-  homepage "https://github.com/dong-labs/inBoxProject"
-  url "https://github.com/dong-labs/inBoxProject/raw/refs/heads/main/thinkflutter/inbox_cli/archive/dong-inbox-#{version}.tar.gz"
+  homepage "https://github.com/dong-labs/inbox-cli"
+  url "https://github.com/dong-labs/inbox-cli/archive/refs/tags/v#{version}.tar.gz"
   sha256 :no_check
 
   version "1.0.0"
 
   def install
+    system "flutter", "pub", "get"
+    system "dart", "compile", "exe", "bin/inbox.dart", "-o", "dong-inbox"
     bin.install "dong-inbox" => "inbox"
   end
 
