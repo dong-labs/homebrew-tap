@@ -6,7 +6,7 @@ class DongInbox < Formula
   homepage "https://github.com/dong-labs/inbox-cli"
   version "1.0.0"
   url "https://github.com/dong-labs/inbox-cli/archive/refs/tags/v#{version}.tar.gz"
-  sha256 :no_check
+  sha256 "537a2aa99dd72d9f7aec1ead8ace8f80138127d76019e546bcf169f67956eefe"
 
   def install
     system "flutter", "pub", "get"
